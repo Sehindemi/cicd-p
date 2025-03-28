@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix :
-        python-version: [3.13, 3.12]
+        python-version: [3.7, 3.13.82]
 
     steps:
       - name: checkout code
@@ -27,7 +27,7 @@ jobs:
 
       - name: run test 
         run: |
-          cd python-app
+          cd python-app/
           python -m unittest discover 
 
       
