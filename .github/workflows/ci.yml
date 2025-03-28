@@ -1,0 +1,11 @@
+name: simple ci pipeline
+on: workflow_dispatch
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cheout code
+        uses: actions/checkout@v2
+
+      - name: test
+        run: echo "Hello World"
