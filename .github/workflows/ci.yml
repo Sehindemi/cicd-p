@@ -1,6 +1,16 @@
 name: python ci
 
-# on: [push]
+on: 
+  push:
+  workflow_dispatch:
+    inputs:
+      python-version:
+        description: "Choose python Version"
+        required: true
+        default: "3.13"
+        type: choice
+        options:
+          - "3.12"
 
 jobs:
   build:
